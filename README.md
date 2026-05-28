@@ -1,22 +1,32 @@
-# 🎙️ Discord Whisper 日記機器人
+# Discord 語音日記機器人
 
-🚀 **基於 OpenAI Whisper 和 GPT-4o 的 Discord 語音日記機器人**  
-🎯 **即時轉錄 + 智能後處理 + 日記總結 + JSON 待辦事項生成**
+基於 OpenAI Whisper 和 GPT-4o 的 Discord 語音日記機器人。上傳語音訊息後自動轉錄、後處理，並在一天結束時整合成完整日記與待辦事項。
 
----
-## 🌟 主要功能
-1. **即時語音轉錄** 🎤  
-   - 上傳語音訊息，機器人自動轉錄  
-   - 使用 OpenAI Whisper API 確保最高準確度  
+## 功能
 
-2. **後處理提升可讀性** ✨  
-   - 使用 GPT-4o 進行語音後處理  
-   - 自動加標點符號、修正錯別字、提升可讀性  
+- 語音轉文字（OpenAI Whisper API）
+- 自動加標點、修正錯別字（GPT-4o 後處理）
+- `/start`：開始記錄當日語音日記
+- `/end`：整合當天所有語音，生成完整日記、心理分析摘要與 JSON 待辦清單
+- 自動分段處理超大音訊檔案
 
-3. **每日記錄 & 智能總結** 📔  
-   - `/start` 開始記錄當日日記  
-   - `/end` 統整當天所有語音訊息並生成完整日記  
-   - 提供摘要 & 心理分析 & JSON 待辦事項  
+## 技術
 
-4. **支援大檔案 & 自動分段** 🔄  
-   - 內建 Whisper 限制處理，確保轉錄完整度  
+- Python 3 / discord.py
+- OpenAI Whisper API（語音轉文字）
+- OpenAI GPT-4o（後處理與日記生成）
+
+## 快速開始
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env   # 填入 DISCORD_BOT_TOKEN 與 OPENAI_API_KEY
+python main.py
+```
+
+## 環境變數
+
+| 變數 | 說明 |
+|------|------|
+| `DISCORD_BOT_TOKEN` | Discord Bot Token |
+| `OPENAI_API_KEY` | OpenAI API 金鑰 |
