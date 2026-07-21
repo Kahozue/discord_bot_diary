@@ -30,3 +30,7 @@ python main.py
 |------|------|
 | `DISCORD_BOT_TOKEN` | Discord Bot Token |
 | `OPENAI_API_KEY` | OpenAI API 金鑰 |
+
+## License
+
+MIT — see [LICENSE](LICENSE).
